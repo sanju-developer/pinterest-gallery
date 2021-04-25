@@ -1,0 +1,69 @@
+div#modal-container {
+    position: fixed;
+    top: 25%;
+    width: 50%;
+    margin: auto;
+    background: white;
+    height: 50%;
+    padding: 16px;
+    left: 25%;
+    box-shadow: #000000;
+    border-radius: 4px;
+    animation-name: example;
+    animation-duration: 1s;  
+    animation-fill-mode: forwards;
+}
+@keyframes example {
+    from {top: 0px;}
+    to {top: 200px;}
+  }
+.modal{
+    position: relative;
+    width: 100%;
+    height: 235px;
+}
+
+.modal-content{
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button.up-down{
+    height: 40px;
+    font-size: 20px;
+    /* background: #ffff;
+    border: none; */
+    box-shadow: none;
+    align-items: center;
+}
+
+.close{
+    display: flex;
+    justify-content: space-between;
+    margin: 16px;
+}
+.close button{
+    font-size: 20px;
+    background: #ffff;
+    border: none;
+    box-shadow: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .modal-content{
+        justify-content: inherit;
+        align-items: flex-end;
+    }
+    .loaded-pic{
+        width: 100px;
+    }
+    button.up-down{
+        margin: 0px 25px;
+    }
+    div#modal-container{
+        width: 70%;
+        left: 10%;
+    }
+}
