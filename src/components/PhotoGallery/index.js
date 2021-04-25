@@ -25,17 +25,23 @@ export default function PhotoGallery() {
     const [modalOpen, setOpenModal] = useState(false)
     const [selectedIndex, setSelectedIndex] = useState(0)
 
-    useEffect(async () => {
-        const listdata = await photoGalleryService(1)
-        setList(listdata)
-        setIsApiLoading(false)
+    useEffect(() => {
+        async function fetchData() {
+            const listdata = await photoGalleryService(1)
+            setList(listdata)
+            setIsApiLoading(false)
+        }
+        fetchData();
     }, [])
 
-    useEffect(async () => {
+    useEffect(() => {
         if (page > 1) {
-            const listdata = await photoGalleryService(page)
-            setList([...list, ...listdata])
-            setIsApiLoading(false)
+            async function fetchData() {
+                const listdata = await photoGalleryService(page)
+                setList([...list, ...listdata])
+                setIsApiLoading(false)
+            }
+            fetchData();
         }
     }, [page])
 
@@ -63,11 +69,12 @@ export default function PhotoGallery() {
                 hasMore={true}
                 loader={<h4>Loading...</h4>}
             >
-                {list.length != 0 && list.map((item, i) =>
+                {list.length !== 0 && list.map((item, i) =>
                     <img
                         key={`${item.id + 'test' + i}`}
                         style={style}
                         src={item.urls.small}
+                        alt="picture"
                         // src={item.thumbnailUrl}
                         onClick={() => openModalHandler(i)}
                     />

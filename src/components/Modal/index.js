@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { InfiniteLoader, List } from 'react-virtualized';
 import './modal.css'
 
@@ -9,24 +9,24 @@ function Modal(props) {
     const [disabledleftArrow, setDisabledleftArrow] = useState(false)
 
     useEffect(() => {
-        if (currentindex == list.length - 1) {
+        if (currentindex === list.length - 1) {
             setDisabledleftArrow(false)
             setDisableRightArrow(true)
         }
-        if (currentindex == 0) {
+        if (currentindex === 0) {
             setDisabledleftArrow(true)
             setDisableRightArrow(false)
         }
 
-        if (currentindex != list.length - 1 && currentindex != 0) {
+        if (currentindex !== list.length - 1 && currentindex !== 0) {
             setDisabledleftArrow(false)
             setDisableRightArrow(false)
         }
     }, [currentindex, list])
 
-    const rightBtnHandler = useCallback(() => {
+    const rightBtnHandler = () => {
         setCurrentindex(currentindex => currentindex + 1)
-    }, [currentindex])
+    }
 
     const leftBtnHandler = () => {
         setCurrentindex(currentindex => currentindex - 1)
@@ -43,6 +43,7 @@ function Modal(props) {
                     <img
                         className="loaded-pic"
                         src={list[currentindex].urls.small}
+                        alt="picture"
                     // src={list[currentindex].thumbnailUrl}
                     /> </div> : <p>Loading...</p>}
             <button disabled={disabledRightArrow} className="up-down" onClick={rightBtnHandler}>&#8594;</button>
