@@ -36,18 +36,17 @@ function Modal(props) {
     }
 
     const rowRenderer = ({ key, index, style }) => {
-        return (list[index] &&
-            <div key={key} className="modal-content" >
-                <button disabled={disabledleftArrow} className="up-down" onClick={leftBtnHandler}>&#8592;</button>
-                {list[currentindex].thumbnailUrl ?
-                    <div className="pic-container" style={{ textAlign: 'center' }}> <p>Picture: {currentindex + 1}</p>
-                        <img
-                            className="loaded-pic"
-                            // src={item.urls.small}
-                            src={list[currentindex].thumbnailUrl}
-                        /> </div> : <p>Loading...</p>}
-                <button disabled={disabledRightArrow} className="up-down" onClick={rightBtnHandler}>&#8594;</button>
-            </div>
+        return (<div key={key} className="modal-content" >
+            <button disabled={disabledleftArrow} className="up-down" onClick={leftBtnHandler}>&#8592;</button>
+            {list[currentindex].urls.small ?
+                <div className="pic-container" style={{ textAlign: 'center' }}> <p>Picture: {currentindex + 1}</p>
+                    <img
+                        className="loaded-pic"
+                        src={list[currentindex].urls.small}
+                    // src={list[currentindex].thumbnailUrl}
+                    /> </div> : <p>Loading...</p>}
+            <button disabled={disabledRightArrow} className="up-down" onClick={rightBtnHandler}>&#8594;</button>
+        </div>
         )
     }
 

@@ -51,6 +51,11 @@ button.up-down{
     box-shadow: none;
 }
 
+img{
+    width: 150px;
+    height: 150px;
+}
+
 @media only screen and (max-width: 600px) {
     .modal-content{
         justify-content: inherit;
