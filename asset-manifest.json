@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/pinterest-gallery/static/css/main.d16502c1.chunk.css",
+    "main.js": "/pinterest-gallery/static/js/main.ddb84620.chunk.js",
+    "main.js.map": "/pinterest-gallery/static/js/main.ddb84620.chunk.js.map",
+    "runtime-main.js": "/pinterest-gallery/static/js/runtime-main.c1604bdc.js",
+    "runtime-main.js.map": "/pinterest-gallery/static/js/runtime-main.c1604bdc.js.map",
+    "static/css/2.b0c8ef5b.chunk.css": "/pinterest-gallery/static/css/2.b0c8ef5b.chunk.css",
+    "static/js/2.94f3203a.chunk.js": "/pinterest-gallery/static/js/2.94f3203a.chunk.js",
+    "static/js/2.94f3203a.chunk.js.map": "/pinterest-gallery/static/js/2.94f3203a.chunk.js.map",
+    "static/js/3.c75f15d6.chunk.js": "/pinterest-gallery/static/js/3.c75f15d6.chunk.js",
+    "static/js/3.c75f15d6.chunk.js.map": "/pinterest-gallery/static/js/3.c75f15d6.chunk.js.map",
+    "index.html": "/pinterest-gallery/index.html",
+    "static/css/2.b0c8ef5b.chunk.css.map": "/pinterest-gallery/static/css/2.b0c8ef5b.chunk.css.map",
+    "static/css/main.d16502c1.chunk.css.map": "/pinterest-gallery/static/css/main.d16502c1.chunk.css.map",
+    "static/js/2.94f3203a.chunk.js.LICENSE.txt": "/pinterest-gallery/static/js/2.94f3203a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c1604bdc.js",
+    "static/css/2.b0c8ef5b.chunk.css",
+    "static/js/2.94f3203a.chunk.js",
+    "static/css/main.d16502c1.chunk.css",
+    "static/js/main.ddb84620.chunk.js"
+  ]
+}
